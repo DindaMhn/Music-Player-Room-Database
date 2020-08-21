@@ -9,11 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.example.ktn_ak07c01.R
 import com.example.ktn_ak07c01.room.artist.Artist
-import com.example.ktn_ak07c01.viewmodel.MusicViewModel
+import com.example.ktn_ak07c01.viewmodel.ArtistViewModel
 import kotlinx.android.synthetic.main.fragment_input_music.*
 
 class InputMusicFragment : Fragment(), View.OnClickListener {
-    val musicViewModel by activityViewModels<MusicViewModel>()
+    val artistViewModel by activityViewModels<ArtistViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +41,7 @@ class InputMusicFragment : Fragment(), View.OnClickListener {
                 if (name == "" || title == "" || image == "") {
                     Toast.makeText(this.context, "Must be Field", Toast.LENGTH_SHORT).show()
                 } else {
-                    musicViewModel.createNewArtist(Artist(name=name,title=title,image=image))
+                    artistViewModel.createNewArtist(Artist(name=name,title=title,image=image))
                     Toast.makeText(this.context, "Data Successfull Added", Toast.LENGTH_SHORT)
                         .show()
                 }

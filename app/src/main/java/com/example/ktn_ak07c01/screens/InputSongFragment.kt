@@ -8,11 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.example.ktn_ak07c01.R
-import com.example.ktn_ak07c01.room.artist.Artist
 import com.example.ktn_ak07c01.room.song.Song
-import com.example.ktn_ak07c01.viewmodel.MusicViewModel
 import com.example.ktn_ak07c01.viewmodel.SongViewModel
-import kotlinx.android.synthetic.main.fragment_input_music.*
 import kotlinx.android.synthetic.main.fragment_input_song.*
 
 class InputSongFragment : Fragment(), View.OnClickListener {
