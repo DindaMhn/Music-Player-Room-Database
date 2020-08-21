@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/listMusicFragment">
+    <fragment
+        android:id="@+id/listMusicFragment"
+        android:name="com.example.ktn_ak07c01.screens.ListMusicFragment"
+        android:label="fragment_list_music"
+        tools:layout="@layout/fragment_list_music" >
+        <action
+            android:id="@+id/action_listMusicFragment_to_detailMusicFragment"
+            app:destination="@id/detailMusicFragment" />
+        <action
+            android:id="@+id/action_listMusicFragment_to_inputMusicFragment2"
+            app:destination="@id/inputMusicFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputMusicFragment2"
+        android:name="com.example.ktn_ak07c01.screens.InputMusicFragment"
+        android:label="fragment_input_music"
+        tools:layout="@layout/fragment_input_music" />
+    <fragment
+        android:id="@+id/detailMusicFragment"
+        android:name="com.example.ktn_ak07c01.screens.DetailMusicFragment"
+        android:label="fragment_detail_music"
+        tools:layout="@layout/fragment_detail_music" >
+        <action
+            android:id="@+id/action_detailMusicFragment_to_inputSongFragment"
+            app:destination="@id/inputSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputSongFragment"
+        android:name="com.example.ktn_ak07c01.screens.InputSongFragment"
+        android:label="fragment_input_song"
+        tools:layout="@layout/fragment_input_song" />
+</navigation>
