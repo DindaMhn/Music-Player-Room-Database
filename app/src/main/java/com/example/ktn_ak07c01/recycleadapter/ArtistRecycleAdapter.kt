@@ -13,7 +13,7 @@ import com.example.ktn_ak07c01.R
 import com.example.ktn_ak07c01.room.artist.Artist
 import com.squareup.picasso.Picasso
 
-class MusicRecycleAdapter
+class ArtistRecycleAdapter
     (
     private val musicList: List<Artist>,
     private val getActivity: FragmentActivity?

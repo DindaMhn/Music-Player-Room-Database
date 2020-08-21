@@ -11,14 +11,14 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ktn_ak07c01.R
-import com.example.ktn_ak07c01.recycleadapter.MusicRecycleAdapter
+import com.example.ktn_ak07c01.recycleadapter.ArtistRecycleAdapter
 import com.example.ktn_ak07c01.viewmodel.ArtistViewModel
 import kotlinx.android.synthetic.main.fragment_list_music.*
 
 class ListMusicFragment : Fragment(), View.OnClickListener {
     val artistViewModel by activityViewModels<ArtistViewModel>()
     lateinit var navController: NavController
-    lateinit var adapter: MusicRecycleAdapter
+    lateinit var adapter: ArtistRecycleAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +37,7 @@ class ListMusicFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         music_recycleView.layoutManager = LinearLayoutManager(activity)
         artistViewModel.allArtist.observe(viewLifecycleOwner, Observer {
-            adapter = MusicRecycleAdapter(it,activity)
+            adapter = ArtistRecycleAdapter(it,activity)
             music_recycleView.adapter = adapter
         })
         navController = Navigation.findNavController(view)
